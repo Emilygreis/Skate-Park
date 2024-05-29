@@ -1,0 +1,19 @@
+-- Script para crear la base de datos y la tabla usuarios
+
+-- Crear la base de datos
+CREATE DATABASE skatepark;
+
+-- Conectar a la base de datos creada
+\c skatepark;
+
+-- Crear la tabla usuarios
+CREATE TABLE skaters (
+    id SERIAL, 
+    email VARCHAR(50) NOT NULL, 
+    nombre VARCHAR(25) NOT NULL, 
+    password VARCHAR(25) NOT NULL, 
+    anos_experiencia INT NOT NULL, 
+    especialidad VARCHAR(50) NOT NULL, 
+    foto VARCHAR(255) NOT NULL, 
+    estado BOOLEAN NOT NULL
+);
